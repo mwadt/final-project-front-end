@@ -1,0 +1,18 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    border: 3px solid #FC7A1E;
+    border-radius: 5px;
+    
+}
+.button {
+    color: #e7e7e7;
+}
+.button:hover {
+    background-color: aqua;
+    color: #485696;
+}

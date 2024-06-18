@@ -1,0 +1,29 @@
+section {
+    display: flex;
+    color: red;
+}
+
+/* section .navbar {
+    display: flex;
+    justify-content: space-between;
+    color: red;
+} */
+.navbar > a {
+    color: #485696;
+    
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    padding: 10px;
+    gap: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+}
