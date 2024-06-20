@@ -1,4 +1,5 @@
 
+
 export const getAllItineraries = async () => {
   try {
     const response = await fetch(`http://localhost:3000/itineraries`, {
@@ -15,8 +16,10 @@ export const getAllItineraries = async () => {
     throw error;
   }
 
+
   return response.json();
 }
+
 
 export const updateItinerary = async (id, itinerary) => {
     try {
@@ -35,6 +38,7 @@ export const updateItinerary = async (id, itinerary) => {
 }
 }
 
+
 export const deleteItinerary = async (id) => {
     try {
         const response = await fetch(`http://localhost:3000/itineraries/${id}`, {
@@ -50,6 +54,7 @@ export const deleteItinerary = async (id) => {
     throw error;        
 }
 }
+
 
 export const createItinerary = async (itinerary) => {
     try {

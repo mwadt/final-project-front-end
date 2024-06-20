@@ -1,12 +1,16 @@
-import Navbar from "../navbar/Navbar";
+import Navibar from "../navbar/Navbar";
+import React from "react";
+import Card from "react-bootstrap/Card";
+
 
 function List() {
   return (
     <>
-    <Navbar />
-    <div>
-      <h1>All Plans</h1>
-    </div>
+    <Navibar />
+    
+
+      
+    
     </>
   );
 }

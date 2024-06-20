@@ -1,8 +1,11 @@
-/* * {
+* {
   background-color: #f9c784;
   color: #485696;
-  
-} */
+   
+}
+.navbar {
+  width: 100%;
+}
 
 
 
@@ -20,10 +23,11 @@ section {
   display: flex;
 } */
 
-/* body {
+ /* body {
   margin: 0;
   font-family: Arial, sans-serif;
-}
+  width: 100%;
+} */
 
 section {
   padding-top: 60px; /* Adjust according to the height of the navbar */
@@ -35,5 +39,15 @@ section {
   align-items: center;
   align-content: center;
   text-align: center;
-} */ 
+}  */
+
+/* button {
+  background-color: #FC7A1E;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+} */
 
