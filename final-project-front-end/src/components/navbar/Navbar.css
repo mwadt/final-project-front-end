@@ -1,14 +1,14 @@
-section {
+/* section {
     display: flex;
     color: red;
-}
+} */
 
 /* section .navbar {
     display: flex;
     justify-content: space-between;
     color: red;
 } */
-.navbar > a {
+/* .navbar > a {
     color: #485696;
     
 }
@@ -26,4 +26,4 @@ body {
     display: flex;
     justify-content: center;
     font-family: Arial, sans-serif;
-}
+} */

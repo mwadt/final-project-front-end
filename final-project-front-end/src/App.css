@@ -1,8 +1,8 @@
-* {
+/* * {
   background-color: #f9c784;
   color: #485696;
   
-}
+} */
 
 
 
@@ -20,20 +20,20 @@ section {
   display: flex;
 } */
 
-body {
+/* body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
 
 section {
   padding-top: 60px; /* Adjust according to the height of the navbar */
-}
+/* } */
 
-.body {
+/* .body {
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
   text-align: center;
-}
+} */ 
 
