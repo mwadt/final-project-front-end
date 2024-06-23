@@ -1,12 +1,18 @@
 import './Create.css';
 import Navibar from '../navbar/Navbar';
-import { useState } from 'react';
-import { createItinerary } from '../../services/itineraryService';
-import { Form, Row, Col, Button } from 'react-bootstrap';
-import {get, set} from 'mongoose'
+import { Form, Row, Col, Button, Container } from 'react-bootstrap';
+import { useState, useEffect } from 'react'
+import { getAllItineraries, updateItinerary, deleteItinerary, createItinerary } from '../../services/itineraryService'
+import { Router, useNavigate } from 'react-router-dom';
 
 
-function Create({setPageDisplay, getItineraries}) {
+// import {get, set} from 'mongoose'
+
+
+function Create() {
+  console.log('Create component rendering...'); // Log when component renders
+  
+  
   const [itinerary, setItinerary] = useState({
     tripName: "",
     location: "",
@@ -20,14 +26,23 @@ function Create({setPageDisplay, getItineraries}) {
   //   setItinerary({...itinerary, [e.target.name]: e.target.value});
   // }
 
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setItinerary((prevState) => ({
+  //     ...prevState,
+  //     [name]: value,
+  //   }));
+  // };
+  const navigate = useNavigate();
   const handleChange = (e) => {
     const { name, value } = e.target;
+    console.log(`Changing ${name} to ${value}`); // Log input changes
     setItinerary((prevState) => ({
       ...prevState,
       [name]: value,
     }));
   };
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log('Submitting form...'); // Log when form submission starts
@@ -35,8 +50,7 @@ function Create({setPageDisplay, getItineraries}) {
     try {
       const result = await createItinerary(itinerary);
       console.log('Itinerary created:', result); // Log the response from the API
-      getItineraries();
-      setPageDisplay('list');
+      navigate('/itineraries') 
     } catch (error) {
       console.error('Error creating itinerary:', error); // Log any errors
     }
@@ -44,14 +58,11 @@ function Create({setPageDisplay, getItineraries}) {
 
   return (
     <>
+    <Container fluid>
     <Navibar />
+
     <div className='create'>
-    <Form onSubmit={ async (e) => {
-      e.preventDefault();
-      await createItinerary(itinerary);
-      getItineraries();
-      setPageDisplay('list');
-    }}>
+    <Form onSubmit={ handleSubmit }>
             <Row>
                 <Form.Group controlId='tripName'>
                     <Form.Label>Trip Name:</Form.Label>
@@ -67,7 +78,8 @@ function Create({setPageDisplay, getItineraries}) {
                 </Form.Group>
                 </Col>
                 
-                <Col md>
+            
+            <Col md>
                 <Form.Group controlId='tripType'>
                     <Form.Label>Trip Type:</Form.Label>
                     <Form.Select aria-label="Select Trip type" value={itinerary.tripType} name='tripType' onChange={handleChange}>
@@ -96,17 +108,22 @@ function Create({setPageDisplay, getItineraries}) {
                 </Col>
             </Row>
 
+
             <Row>
                 <Form.Group controlId='notes'>
                     <Form.Label>Notes:</Form.Label>
                     <Form.Control as='textarea' value={itinerary.notes} name='notes' rows={3} onChange={handleChange}/>
                 </Form.Group>
             </Row>
+            <Row>
+             
+            <Button variant='secondary'  type='submit'>Submit</Button>\
+            </Row>
+
         </Form>
-        <Row>
-        <Button variant='secondary' type='submit'>Submit</Button>\
-        </Row>
+        
     </div>
+    </Container>
     </>
   )
 }

@@ -1,8 +1,10 @@
 
 
+const backendBaseUrl = import.meta.env.VITE_APP_BACKEND_URL;
+
 export const getAllItineraries = async () => {
   try {
-    const response = await fetch(`http://localhost:3000/itineraries`, {
+    const response = await fetch(`${backendBaseUrl}/itineraries`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -20,10 +22,30 @@ export const getAllItineraries = async () => {
   return response.json();
 }
 
+export const getItinerary = async (id) => {
+    try {
+      const response = await fetch(`${backendBaseUrl}/itineraries/${id}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+    const result = await response.json();
+    console.log(result);
+    return result;
+    } catch (error) {
+      console.error('Error:', error);
+      throw error;
+    }
+  
+  
+    return response.json();
+  }
+
 
 export const updateItinerary = async (id, itinerary) => {
     try {
-        const response = await fetch(`http://localhost:3000/itineraries/${id}`, {
+        const response = await fetch(`${backendBaseUrl}/itineraries/${id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
@@ -41,7 +63,7 @@ export const updateItinerary = async (id, itinerary) => {
 
 export const deleteItinerary = async (id) => {
     try {
-        const response = await fetch(`http://localhost:3000/itineraries/${id}`, {
+        const response = await fetch(`${backendBaseUrl}/itineraries/${id}`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json',
@@ -58,7 +80,7 @@ export const deleteItinerary = async (id) => {
 
 export const createItinerary = async (itinerary) => {
     try {
-        const response = await fetch(`http://localhost:3000/itineraries`, {
+        const response = await fetch(`${backendBaseUrl}/itineraries`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

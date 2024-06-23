@@ -1,0 +1,11 @@
+body {
+    justify-content: center;
+}
+
+element.style {
+    width: 25%;
+    display: flex;
+}
+.all-itineraries {
+    width: 100%
+}

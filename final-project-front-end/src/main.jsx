@@ -1,8 +1,8 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import * as React from "react";
+import * as ReactDOM from "react-dom/client";
 import App from './App.jsx'
 import Create from './components/create/Create.jsx'
-import List from './components/list/List.jsx'
+import AllItineraries from './components/allItineraries/AllItineraries.jsx'
 import Edit from './components/edit/Edit.jsx'
 import './index.css'
 
@@ -14,14 +14,13 @@ import {
 const router = createBrowserRouter([
   { path: '/', element: <App />},
   { path: '/create', element: <Create />},
-  { path: '/list', element: <List />},
-  { path: '/edit', element: <Edit />},
+  { path: '/itineraries', element: <AllItineraries />},
+  { path: `/itineraries/edit/:id`, element: <Edit />},
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
       
-    {/* <App />   */}
   </React.StrictMode>,
 )
