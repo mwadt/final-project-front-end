@@ -3,6 +3,7 @@ import './Navbar.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown  from 'react-bootstrap/NavDropdown';
+import { Link } from 'react-router-dom';
 
 
 function Navibar() {
@@ -31,9 +32,9 @@ function Navibar() {
         <li onClick={() => redirect('/create')}>Create</li>
         <li onClick={() => redirect('/')}>List</li>
       </ul> */}
-        <a href="/">Home</a>
-        <a href="/create">New Itenerary</a> 
-        <a href="/itineraries">All Iteneraries</a>
+        <Link to="/">Home</Link>
+        <Link to="/create">New Itenerary</Link> 
+        <Link to="/itineraries">All Iteneraries</Link>
     </div>
   );
 }
