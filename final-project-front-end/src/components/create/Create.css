@@ -34,21 +34,25 @@ button {
     margin: 0 auto;
     padding: 20px;
     border-radius: 5px;
+    background-color: mintcream;
 }
 .create {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 75vh;
-    width: 75vh;
-    border: 3px solid #FC7A1E;
+    /* height: 75vh;
+    width: 75vh; */
+    border: 3px solid #313638;
     text-align: center;
-
+    background-color: #A4D4B4;
 }
 body {
-     
+     background-color: white;
     height: 100%;
     justify-content: center;
 }
-
+button {
+    background-color: #313638;
+    color: red;
+}
 
