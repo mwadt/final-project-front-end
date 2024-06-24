@@ -4,15 +4,18 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown  from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
 
 
 function Navibar() {
   return (
-    // <Navbar bg="light" expand="lg">
+    <div className="navbar">
+    {/* // <Navbar bg="light" expand="lg">
+      <Container>
     //   <Navbar.Brand href="/">Travel Itenerary</Navbar.Brand>
     //   <Navbar.Toggle aria-controls="basic-navbar-nav" />
     //   <Navbar.Collapse id="basic-navbar-nav">
-    //     <Nav className="mr-auto"> 
+    //     <Nav className="me-auto"> 
     //       <Nav.Link href="/">Home</Nav.Link>
     //       <Nav.Link href="/create">New Itenerary</Nav.Link>
     //       <Nav.Link href="/itineraries">All Iteneraries</Nav.Link>
@@ -20,21 +23,49 @@ function Navibar() {
     //         <NavDropdown.Item href="/">Home</NavDropdown.Item>
     //         <NavDropdown.Item href="/itineraries">List</NavDropdown.Item>
     //         <NavDropdown.Item href="/create">Create</NavDropdown.Item>
-    //         <NavDropdown.Item href="/edit">Edit</NavDropdown.Item>
+    //         
 
     //       </NavDropdown>
     //     </Nav>
     //   </Navbar.Collapse>
-    // </Navbar>
-    <div className="navbar">
+    </Container>
+    // </Navbar> */}
+
+<Navbar expand="lg" className="bg-body-tertiary">
+      <Container>
+        <Navbar.Brand href="#home">Travel Itinerary App</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/create">Create New Itinerary</Nav.Link>
+            <Nav.Link href="/itineraries">View All Itineraries</Nav.Link>
+            {/* Planning on using this dropdown for additional features, right now it just repeats the same links as nav */}
+            <NavDropdown title="" id="basic-nav-dropdown"> 
+              <NavDropdown.Item href="/"></NavDropdown.Item>
+              <NavDropdown.Item href="/">
+                Home
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/create">Create</NavDropdown.Item>
+              
+              <NavDropdown.Item href="/itineraries">
+                View All Itineraries
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+    
       {/* <ul>
         <li onClick={() => redirect('/')}>Home</li>
         <li onClick={() => redirect('/create')}>Create</li>
         <li onClick={() => redirect('/')}>List</li>
       </ul> */}
-        <Link to="/">Home</Link>
+
+        {/* <Link to="/">Home</Link>
         <Link to="/create">New Itenerary</Link> 
-        <Link to="/itineraries">All Iteneraries</Link>
+        <Link to="/itineraries">All Iteneraries</Link> */}
     </div>
   );
 }

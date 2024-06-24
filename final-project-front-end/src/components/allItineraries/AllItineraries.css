@@ -1,5 +1,6 @@
 body {
     justify-content: center;
+    font-size: 16px;
 }
 
 element.style {
@@ -8,4 +9,17 @@ element.style {
 }
 .all-itineraries {
     width: 100%
+}
+.card {
+    margin: 10px;
+    font-size: 16px;
+    border: 2px solid;
+}
+button /* END: ed8c6549bwf9 */ {
+    border-radius: 5px;
+    background-color: #313638;
+    color: white
+}
+p {
+    font-size: 16px;
 }

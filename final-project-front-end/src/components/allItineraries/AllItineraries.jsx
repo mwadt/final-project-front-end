@@ -52,10 +52,10 @@ function AllItineraries() {
          <Card key={itinerary._id}>
         
               <h3>{itinerary.tripName}</h3>
-              <p>{itinerary.location}</p>
-              <p>{itinerary.startDate}</p>
-              <p>{itinerary.endDate}</p>
-              <p>{itinerary.notes}</p>
+              <p>Location: {itinerary.location}</p>
+              <p>Trip Start Date: {itinerary.startDate}</p>
+              <p>Trip End Date: {itinerary.endDate}</p>
+              <p>Notes: {itinerary.notes}</p>
               <Link to={`/itineraries/edit/${itinerary._id}`} >
               <button className='edit-button' >Edit</button>
               </Link>

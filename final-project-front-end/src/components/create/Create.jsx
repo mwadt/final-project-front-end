@@ -1,9 +1,10 @@
 import './Create.css';
 import Navibar from '../navbar/Navbar';
-import { Form, Row, Col, Button, Container } from 'react-bootstrap';
+import { Form, Row, Col, Button, Container, Modal } from 'react-bootstrap';
 import { useState, useEffect } from 'react'
 import { getAllItineraries, updateItinerary, deleteItinerary, createItinerary } from '../../services/itineraryService'
 import { Router, useNavigate } from 'react-router-dom';
+
 
 
 // import {get, set} from 'mongoose'
@@ -128,3 +129,33 @@ function Create() {
   )
 }
 export default Create;
+
+// function Activity() {
+//   const [smShow, setSmShow] = useState(false);
+//   const [lgShow, setLgShow] = useState(false);
+
+//   return (
+//     <>
+//       <Button onClick={() => setSmShow(true)} className="me-2">
+//         Add a new activity
+//       </Button>
+//       <Button onClick={() => setLgShow(true)}>Large modal</Button>
+//       <Modal
+//         size="sm"
+//         show={smShow}
+//         onHide={() => setSmShow(false)}
+//         aria-labelledby="example-modal-sizes-title-sm"
+//       >
+//         <Modal.Header closeButton>
+//           <Modal.Title id="example-modal-sizes-title-sm">
+//             Small Modal
+//           </Modal.Title>
+//         </Modal.Header>
+//         <Modal.Body>...</Modal.Body>
+//       </Modal>
+      
+//     </>
+//   );
+// }
+
+// export Activity;

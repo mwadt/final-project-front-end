@@ -14,30 +14,27 @@ import { Nav } from 'react-bootstrap';
 
 function Home() {
   return (
-    <div className='home'>
+    
         <Container fluid>
         
        <Navibar />
-        
+       <div className='home'>
         
         <h1>Welcome to the Travel App</h1>
-        <p>Placeholder text blurb</p>
-        {/* <Card class>
+        <h2>Discover the ultimate simplicity in travel planning with our Travel Itinerary App! Effortlessly create, edit, view, and delete your travel plans all in one place. Whether you're organizing a weekend getaway or a month-long adventure,
+           our user-friendly interface makes it easy to manage your itinerary on the go. Simplify your travel experience and focus on enjoying your journey with our intuitive app.</h2>
+         {/* <Card class>
             <Card.Body>
                 <Card.Title>Card Title</Card.Title>
                 <Card.Text>Card Text</Card.Text>
                 <Button variant='primary'>Read More</Button>
             </Card.Body>
-        </Card>
-        <Breadcrumb>
-            <Breadcrumb.Item>Home</Breadcrumb.Item>
-            <Breadcrumb.Item>Create</Breadcrumb.Item>
-            <Breadcrumb.Item>List</Breadcrumb.Item>
-            </Breadcrumb>
-        <Alert variant='success'>This is a primary alert</Alert>
-        <Button>Test Button</Button> */}
+        </Card>  */}
+        
+        
+        </div>
         </Container>
-    </div>
+    
   )
 }
 
