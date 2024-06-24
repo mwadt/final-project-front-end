@@ -31,31 +31,7 @@ function Navibar() {
     </Container>
     // </Navbar> */}
 
-<Navbar expand="lg" className="bg-body-tertiary">
-      <Container>
-        <Navbar.Brand href="#home">Travel Itinerary App</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/create">Create New Itinerary</Nav.Link>
-            <Nav.Link href="/itineraries">View All Itineraries</Nav.Link>
-            {/* Planning on using this dropdown for additional features, right now it just repeats the same links as nav */}
-            <NavDropdown title="" id="basic-nav-dropdown"> 
-              <NavDropdown.Item href="/"></NavDropdown.Item>
-              <NavDropdown.Item href="/">
-                Home
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/create">Create</NavDropdown.Item>
-              
-              <NavDropdown.Item href="/itineraries">
-                View All Itineraries
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+
     
       {/* <ul>
         <li onClick={() => redirect('/')}>Home</li>
@@ -63,9 +39,9 @@ function Navibar() {
         <li onClick={() => redirect('/')}>List</li>
       </ul> */}
 
-        {/* <Link to="/">Home</Link>
+        <Link to="/">Home</Link>
         <Link to="/create">New Itenerary</Link> 
-        <Link to="/itineraries">All Iteneraries</Link> */}
+        <Link to="/itineraries">All Iteneraries</Link>
     </div>
   );
 }
